@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="J-Vista Blendz - Elevating Experiences Through Perfect Harmony. Discover our premium services and products.">
+    <meta name="keywords" content="J-Vista Blendz, premium services, harmony, quality">
+    <meta name="author" content="J-Vista Blendz">
+    
+    <title>J-Vista Blendz | Elevating Experiences Through Perfect Harmony</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="J-Vista Blendz | Premium Services">
+    <meta property="og:description" content="Elevating Experiences Through Perfect Harmony. Discover our premium services and products.">
+    <meta property="og:image" content="images/logo.jpg">
+    <meta property="og:url" content="https://www.jvistablendz.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Google Analytics (replace UA-XXXXX-Y with your actual tracking ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXX');
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: white;
+            background-color: #000000;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Responsive design adjustments */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            h1 {
+                font-size: 36px;
+            }
+            
+            h2 {
+                font-size: 24px;
+            }
+            
+            .section {
+                padding: 20px;
+                margin: 20px 0;
+            }
+            
+            .services, .team, .contact {
+                flex-direction: column;
+            }
+            
+            .service-card, .team-member {
+                margin-bottom: 20px;
+            }
+        }
+        
+        /* Additional styles for form elements */
+        .contact-form {
+            margin-top: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        input, textarea, select {
+            width: 100%;
+            padding: 12px;
+            border-radius: 5px;
+            border: 1px solid #333;
+            background-color: rgba(255, 255, 255, 0.05);
+            color: white;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        button {
+            background: linear-gradient(135deg, #4B6EFF 0%, #9A4AFF 100%);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(75, 110, 255, 0.4);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 0;
+            background: linear-gradient(135deg, #000000 0%, #0e0e0e 100%);
+        }
+        
+        h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #4B6EFF 0%, #9A4AFF 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+        
+        h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #42C3D6;
+        }
+        
+        h3 {
+            font-size: 24px;
+            color: #9A4AFF;
+            margin-top: 30px;
+        }
+        
+        .tagline {
+            font-style: italic;
+            font-size: 22px;
+            color: #E0CA6C;
+            margin-bottom: 30px;
+        }
+        
+        .section {
+            margin: 40px 0;
+            padding: 30px;
+            border-radius: 15px;
+            background: linear-gradient(135deg, #111111 0%, #1a1a1a 100%);
+            border-left: 5px solid #42C3D6;
+        }
+        
+        .gold-accent {
+            color: #E0CA6C;
+            font-weight: bold;
+        }
+        
+        .mission-quote {
+            font-style: italic;
+            font-size: 22px;
+            padding: 20px;
+            border-left: 3px solid #9A4AFF;
+            margin: 20px 0;
+            background-color: rgba(154, 74, 255, 0.1);
+        }
+        
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        
+        .service-card {
+            flex: 1 1 300px;
+            padding: 20px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #111111 0%, #1a1a1a 100%);
+            border-top: 3px solid #4B6EFF;
+            margin-bottom: 20px;
+        }
+        
+        .team {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 30px;
+        }
+        
+        .team-member {
+            flex: 1 1 250px;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #111111 0%, #1a1a1a 100%);
+            border-bottom: 3px solid #42C3D6;
+        }
+        
+        .testimonial {
+            font-style: italic;
+            padding: 25px;
+            border-radius: 10px;
+            background-color: rgba(66, 195, 214, 0.1);
+            margin: 30px 0;
+            border-right: 3px solid #42C3D6;
+        }
+        
+        .client-name {
+            text-align: right;
+            color: #E0CA6C;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        
+        .contact {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        
+        .contact-info {
+            flex: 1 1 300px;
+        }
+        
+        .social {
+            margin-top: 20px;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 30px 0;
+            color: #888;
+            border-top: 1px solid #333;
+            margin-top: 50px;
+        }
+        
+        .highlight {
+            color: #42C3D6;
+            font-weight: bold;
+        }
+        
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        
+        .logo-container {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .logo-image {
+            max-width: 250px;
+            margin: 0 auto;
+        }
+        
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        ul li {
+            padding: 10px 0;
+            border-bottom: 1px solid #333;
+        }
+        
+        ul li:before {
+            content: "✦";
+            color: #E0CA6C;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <img src="/J-Vista/J-Vista Biz Logo.jpg" alt="J-Vista Blendz Logo" class="logo-image">
+            </div>
+            <h1>J-VISTA BLENDZ</h1>
+            <div class="tagline">Elevating Experiences Through Perfect Harmony</div>
+        </header>
+        
+        <div class="section">
+            <h2>WHO WE ARE</h2>
+            <p>
+                <span class="highlight">J-VISTA BLENDZ</span> is a premium lifestyle brand that specializes in creating harmonious experiences through our carefully crafted products and services. Founded in 2022 by Jordan and Victoria Blendz, we've grown from a small passion project to a recognized name in the industry.
+            </p>
+            <p>Our passion for perfection and harmony drives everything we do, from our customer interactions to our meticulously developed offerings.</p>
+            <div class="image-container">
+                <img src="/api/placeholder/600/300" alt="J-Vista Blendz Team">
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>OUR MISSION</h2>
+            <div class="mission-quote">
+                "To elevate everyday experiences through the perfect harmony of quality, innovation, and genuine connection."
+            </div>
+            <p>We believe <span class="gold-accent">that true luxury lies in the perfect balance of elements</span>. Every day, we work to bring this philosophy into every product we create and every service we deliver, creating meaningful experiences that resonate with our clients long after their initial encounter with our brand.</p>
+        </div>
+        
+        <div class="section">
+            <h2>WHAT WE OFFER</h2>
+            <div class="services">
+                <div class="service-card">
+                    <h3>Premium Blends</h3>
+                    <div class="image-container">
+                        <img src="/api/placeholder/300/200" alt="Premium Blends">
+                    </div>
+                    <p>Our signature collection of premium blends brings together the finest ingredients in perfect harmony. Each blend is carefully crafted to deliver a remarkable sensory experience, whether you're enjoying our aromatic coffee blends, artisanal tea collections, or exclusive fragrance compositions.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Lifestyle Experiences</h3>
+                    <div class="image-container">
+                        <img src="/api/placeholder/300/200" alt="Lifestyle Experiences">
+                    </div>
+                    <p>From intimate gatherings to corporate events, our curated lifestyle experiences bring the J-Vista Blendz philosophy to life. Our expert team works closely with you to design memorable moments that capture the perfect balance of elegance, engagement, and uniqueness for your special occasions.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Custom Creations</h3>
+                    <div class="image-container">
+                        <img src="/api/placeholder/300/200" alt="Custom Creations">
+                    </div>
+                    <p>Express your unique vision through our bespoke creation services. Whether you're looking for a custom blend that captures your brand's essence or a personalized gift collection that leaves a lasting impression, our team will collaborate with you to develop offerings that perfectly reflect your identity.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>WHY CHOOSE US</h2>
+            <ul>
+                <li><span class="highlight">Artisanal Quality</span> - Every J-Vista Blendz product is crafted with meticulous attention to detail and a commitment to excellence that surpasses industry standards.</li>
+                <li><span class="highlight">Innovative Approach</span> - We continuously explore new ideas and techniques to create unique blends and experiences that challenge conventional boundaries.</li>
+                <li><span class="highlight">Personalized Service</span> - We believe in building genuine relationships with our clients, taking the time to understand your needs and preferences to deliver truly personalized solutions.</li>
+            </ul>
+            <div class="image-container">
+                <img src="/api/placeholder/600/300" alt="J-Vista Blendz Experience">
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>OUR TEAM</h2>
+            <div class="team">
+                <div class="team-member">
+                    <div class="image-container">
+                        <img src="/api/placeholder/200/200" alt="Jordan Blendz">
+                    </div>
+                    <h3>Jordan Blendz</h3>
+                    <p class="gold-accent">Founder & Creative Director</p>
+                    <p>With over 15 years of experience in sensory design and product development, Jordan brings a unique vision to every J-Vista creation. His background in culinary arts and aromachology has helped define our signature approach to blending tradition with innovation.</p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="image-container">
+                        <img src="/api/placeholder/200/200" alt="Victoria Blendz">
+                    </div>
+                    <h3>Victoria Blendz</h3>
+                    <p class="gold-accent">Co-Founder & Experience Director</p>
+                    <p>Victoria's exceptional talent for creating memorable experiences drives our service philosophy. With her background in luxury hospitality and event design, she ensures that every J-Vista Blendz experience delivers the perfect harmony of sophistication and genuine connection.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>CLIENT SUCCESS STORIES</h2>
+            <div class="testimonial">
+                "J-Vista Blendz created a custom fragrance for our company's signature product line that perfectly captured our brand essence. Their collaborative approach and attention to detail exceeded our expectations. The blend has become a defining element of our customer experience and has significantly increased our brand recognition."
+                <div class="client-name">— Olivia Chen, Head of Product Development at Luxe Living Essentials</div>
+            </div>
+            <p>For Luxe Living Essentials, we developed a signature scent profile that became an integral part of their brand identity. The custom blend not only differentiated their premium home products in a competitive market but also created a memorable sensory experience that increased customer loyalty by 42% within six months of implementation.</p>
+            <div class="image-container">
+                <img src="/api/placeholder/600/300" alt="Client Success Story">
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>CONNECT WITH US</h2>
+            <div class="contact">
+                <div class="contact-info">
+                    <p><span class="highlight">📍</span> 1250 Harmony Avenue, Suite 300, Los Angeles, CA 90024</p>
+                    <p><span class="highlight">📱</span> (310) 555-8729</p>
+                    <p><span class="highlight">✉️</span> hello@jvistablendz.com</p>
+                    <p><span class="highlight">🌐</span> www.jvistablendz.com</p>
+                    
+                    <div class="social">
+                        <h3>Follow Us:</h3>
+                        <p>
+                            <a href="https://instagram.com/jvistablendz" style="color: #E0CA6C; margin-right: 15px; text-decoration: none;">Instagram</a>
+                            <a href="https://facebook.com/jvistablendz" style="color: #E0CA6C; margin-right: 15px; text-decoration: none;">Facebook</a>
+                            <a href="https://twitter.com/jvistablendz" style="color: #E0CA6C; text-decoration: none;">Twitter</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="image-container">
+                    <img src="/api/placeholder/400/300" alt="J-Vista Blendz Store">
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <h3>Send Us a Message</h3>
+                <form id="contactForm" action="contact.php" method="POST">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <select id="subject" name="subject">
+                            <option value="">Select a Subject</option>
+                            <option value="General Inquiry">General Inquiry</option>
+                            <option value="Service Information">Service Information</option>
+                            <option value="Partnership Opportunity">Partnership Opportunity</option>
+                            <option value="Feedback">Feedback</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">Send Message</button>
+                    </div>
+                </form>
+                
+                <script>
+                    // Basic form validation
+                    document.getElementById('contactForm').addEventListener('submit', function(event) {
+                        const email = document.getElementById('email').value;
+                        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                        
+                        if (!emailRegex.test(email)) {
+                            alert('Please enter a valid email address.');
+                            event.preventDefault();
+                        }
+                    });
+                </script>
+            </div>
+        </div>
+        
+        <div class="footer">
+            © 2023 J-VISTA BLENDZ | All Rights Reserved
+            <p>
+                <a href="privacy-policy.html" style="color: #666; margin-right: 15px; text-decoration: none;">Privacy Policy</a>
+                <a href="terms-of-service.html" style="color: #666; text-decoration: none;">Terms of Service</a>
+            </p>
+            <p style="margin-top: 20px; font-size: 12px;">
+                This site is protected by reCAPTCHA and the Google
+                <a href="https://policies.google.com/privacy" style="color: #666;">Privacy Policy</a> and
+                <a href="https://policies.google.com/terms" style="color: #666;">Terms of Service</a> apply.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
